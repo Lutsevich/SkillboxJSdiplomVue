@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
-    <router-link to="/">Go to home</router-link>
-    <router-link to="/auth">Go to auth</router-link>
-    <router-link to="/list">Go to list</router-link>
+    <router-link :to="{name: 'home'}">Go to home</router-link>
+    <router-link :to="{name: 'auth'}">Go to auth</router-link>
+    <router-link :to="{name: 'list'}">Go to list</router-link>
     <router-view></router-view>
   </div>
 </template>

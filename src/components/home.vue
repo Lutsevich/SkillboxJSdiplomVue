@@ -7,12 +7,19 @@
 <script>
   export default {
     mounted(){
-      const authenticationUrl = this.$unsplash.auth.getAuthenticationUrl([
-        "public",
-        "write_likes"
-      ]);
+      const code = location.search.split('code=')[1];
+      if (code) {
+        this.$router.push('/auth');
+      } else {
+        const authenticationUrl = this.$unsplash.auth.getAuthenticationUrl([
+          "public",
+          "write_likes"
+        ]);
 
-      location.assign(authenticationUrl);
+        location.assign(authenticationUrl);
+      }
+        
+        console.log("auth", this.$unsplash._bearerToken);
     }
   }
 </script>

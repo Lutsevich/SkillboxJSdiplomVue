@@ -12,10 +12,10 @@ import PageNotFound from './components/not-found.vue';
 export const router = new VueRouter({
 	routes: [
 		{ name: '404', path: "*", component: PageNotFound, meta: { title: 'Not Found' } },
-		{ path: '/', component: Home },
-		{ path: '/auth', component: Auth },
+		{ name: 'home', path: '/', component: Home },
+		{ name: 'auth', path: '/auth', component: Auth },
 		{ name: 'list', path: '/list', component: List },			
-		{ path: '/photo/:id', component: Photo}
-	],
-	mode: 'history'
+		{ name: 'photo', path: '/photo/:id', component: Photo}
+	]
+	//mode: 'history'
 });

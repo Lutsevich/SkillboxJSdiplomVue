@@ -16,7 +16,7 @@ export default {
           localStorage.setItem('token', this.$unsplash._bearerToken);
         });
     } 
-    this.$router.push("list");
+    this.$router.push('/list');
     console.log("auth", this.$unsplash._bearerToken);
   }
 }

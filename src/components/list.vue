@@ -4,7 +4,7 @@
     <b-container>
       <b-row class="align-items-center">
           <b-col class="mb-4" col md="3" sm="6" v-for="(photo) in photos" :key="photo.id">
-              <router-link  :to="'/photo/' + photo.id">
+              <router-link  :to="{ name: 'photo', params: {id: photo.id} }">
                 <img class="w-100" :src="photo.urls.thumb">
               </router-link>
               <div>
